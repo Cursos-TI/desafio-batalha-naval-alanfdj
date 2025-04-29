@@ -36,5 +36,54 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+
+
+    //MONTA TABULEIRO
+  int tabuleiro[10][10] = {
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+
+  };
+
+
+//VARIAVEIS QUE REPRESENTAM OS NAVIOS
+int navio1[3] = {3, 3, 3};
+int navio2[3] = {3, 3, 3};
+
+//POSICIONA NAVIO NA HORIZONTAL
+tabuleiro[7][2] = navio1[0];
+tabuleiro[7][3] = navio1[1];
+tabuleiro[7][4] = navio1[2];
+
+//POSICIONA NAVIO NA VERTICAL
+tabuleiro[2][6] = navio2[0];
+tabuleiro[3][6] = navio2[1];
+tabuleiro[4][6] = navio2[2];
+
+
+//IMPRIME O TABULEIRO COM OS DOIS NAVIOS POSICIONADOS
+  for (int i = 0; i < 10; i++) { // Loop para as linhas
+    for (int j = 0; j < 10; j++) { // Loop para as colunas
+      
+      printf("%d ", tabuleiro[i][j]); // Imprime o elemento atual
+    }
+    printf("\n"); // Pula para a próxima linha para melhor visualização
+  }
+
+
+
+
+
+
+
+
     return 0;
 }
